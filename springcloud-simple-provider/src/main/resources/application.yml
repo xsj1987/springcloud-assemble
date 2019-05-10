@@ -1,2 +1,12 @@
 server:
-  port: 8000
+  port: 8002
+## 如果没有配置Eureka注册中心的话，监控则需要单独配置
+spring:
+  boot:
+    admin:
+      # 配置Admin Server的地址
+      url: http://localhost:8005
+management:
+  security:
+    # 关闭安全验证
+    enabled: false
