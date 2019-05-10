@@ -2,6 +2,8 @@ server:
   port: 8001
 ## 如果没有配置Eureka注册中心的话，监控则需要单独配置
 spring:
+  application:
+    name: customer-server
   boot:
     admin:
       # 配置Admin Server的地址
@@ -10,3 +12,11 @@ management:
   security:
     # 关闭安全验证
     enabled: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    # 表示将自己的IP注册到Eureka Server，默认为false，如果不配置，则表示将微服务所在操作系统的hostname注册到Eureka Server
+    prefer-ip-address: true
