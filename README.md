@@ -4,4 +4,4 @@
 #### springcloud-eureka配置
 [详情](/springcloud-eureka-server/Eureka-desc.md)
 #### springcloud-ribbon配置
-[详情](/springcloud-simple-customer-ribbon/Eureka-desc.md)
+[详情](/springcloud-simple-customer-ribbon/Ribbon-desc.md)
