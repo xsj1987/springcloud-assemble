@@ -20,6 +20,7 @@ public class ConsumerController {
 	 */
 	@GetMapping("/user/{id}")
 	public Users getUserById(@PathVariable int id){
-		return restTemplate.getForObject("http://localhost:8000/"+id, Users.class);
+		return restTemplate.getForObject("http://localhost:8002/"+id, Users.class);
 	}
+
 }
