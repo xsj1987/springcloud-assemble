@@ -1,0 +1,17 @@
+server:
+  port: 8008
+spring:
+  application:
+    name: customer-hystrix-turbine
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    # 表示将自己的IP注册到Eureka Server，默认为false，如果不配置，则表示将微服务所在操作系统的hostname注册到Eureka Server
+    prefer-ip-address: true
+
+turbine:
+  appConfig: customer-hystrix-server
+  clusterNameExpression: "'default'"
