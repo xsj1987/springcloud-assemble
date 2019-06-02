@@ -23,3 +23,5 @@ turbine:
   appConfig: customer-hystrix-server
   clusterNameExpression: "'default'"
 ```
+4. Turbine与RabbitMQ集成
+Turbine可以通过消息中间件进行监控数据的收集 

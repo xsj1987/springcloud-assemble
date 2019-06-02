@@ -53,3 +53,5 @@ eureka:
 ```
 ### Eureka Server的高可用
 Eureka Server可以通过运行多个实例并相互注册的方式实现高可用部署，Eureka Server实例会彼此增量的同步信息，从而确保节点数据一致，将defaultZone的地址改为其他Eureka Server地址就可以了
+### Eureka自我保护模式
+当Eureka Server节点在短时间内丢失过多客户端时(比如网络分区故障)，那么这个节点就会进入自我保护模式，即Eureka Server会保护服务注册表中的信息，不会删除服务注册表中的数据，当网络故障恢复后，该节点会自动退出自我保护模式

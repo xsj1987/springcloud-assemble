@@ -43,3 +43,4 @@ spring:
       url: http://localhost:8005
 ```
 5. 访问监控http://localhost:8005
+6. 如果应用客户端注册在Eureka中，那么应用客户端不需要再进行配置，只需引入client包，Admin Server会自动在Eureka中获取需要监控的服务。
