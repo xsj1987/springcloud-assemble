@@ -25,3 +25,7 @@
 简介：聚合多个Hystrix项目监控数据，方便可视化插件Dashboard查询
 
 [详情](/springcloud-hystrix-turbine/Turbine-desc.md)
+#### springcloud-Feign配置
+简介：声明式、模板化的HTTP客户端
+
+[详情](/springcloud-simple-customer-feign/Feign-desc.md)
