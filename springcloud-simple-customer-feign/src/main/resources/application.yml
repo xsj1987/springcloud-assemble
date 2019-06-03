@@ -1,0 +1,26 @@
+server:
+  port: 8004
+## 如果没有配置Eureka注册中心的话，监控则需要单独配置
+spring:
+  application:
+    name: customer-feign-server
+  boot:
+    admin:
+      # 配置Admin Server的地址
+      url: http://localhost:8005
+management:
+  security:
+    # 关闭安全验证
+    enabled: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+logging:
+  level:
+    # 将Feign接口的日志级别设置为DEBUG，因为Feign只对DEBUG级别做出响应
+    com.study.feign.services.UserFeignClient: DEBUG
